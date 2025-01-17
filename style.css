@@ -1,0 +1,114 @@
+body {          
+    color: #343a40; /* Couleur de texte  */
+    background-size: 100% auto;
+    background-image: url(illustration-de-fruits.jpg);
+    
+    
+}
+
+/* Titres principaux */
+h1 {
+    text-align: center;
+    color: #262122; 
+    margin-bottom: 20px;
+}
+
+/* Barre de navigation */
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #256ebd;
+    width: 100%;
+    height: 40px;
+    margin: auto;    
+}
+
+nav ul li{
+    margin: 0 50px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+/* Formulaire */
+form {
+    max-width: 400px; /*largeur maximale*/
+    margin: 0 auto; /* Centrer le formulaire */
+    padding: 20px;
+    border: 1px solid #ced4da; /* Bordure grise légère */
+    border-radius: 8px;
+    background-color: #ffffff; /* Fond blanc */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* l'ombre */
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #63a3f7; /* Couleur du bouton */
+    color: #ffffff; /* Couleur du texte */
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+    background-color: #256ebd; 
+}
+
+
+table {
+    width: 80%;
+    margin: 20px auto; /* Centre le tableau */
+    border-collapse: collapse; /* Supprimer les espaces entre les bordures */
+    background-color: #ffffff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+table th, table td {
+    padding: 10px 15px;
+    text-align: left;
+    border: 1px solid #dee2e6; /* Bordure des cellules */
+
+}
+
+
+table th {
+    background-color: #63a3f7; /* Fond pour les en-têtes */
+    color: #ffffff; /* Texte blanc  */
+}
+
+
+table tr:hover {
+    background-color: #e3eaf1; /* Couleur au survol */
+}
+
+/* Total général */
+table tfoot td {
+    font-weight: bold;
+    color: #63a3f7;
+    
+}
