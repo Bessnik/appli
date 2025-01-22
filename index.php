@@ -64,6 +64,23 @@
 
     ?>
 
+    // Les superglobales sont des variables prédefinis est accessibles depuis n'importe quel fichier PHP.
+    Exemples de superglobales :
+
+    $_GET Contient les données passées dans l'URL via la méthode GET.
+    $_POST  les données envoyées via un formulaire avec la méthode POST.
+    $_SESSION  les données de session.
+    $_COOKIE  les données des cookies.
+
+    // Un tableau associatif est une structure de données qui permet de lier des clés à des valeurs. Par exemple, j'ai des produits comme clés ( exemple, 'pomme') et des prix comme valeurs ( exemple, 2€).
+
+
+    // Une session contient des données qui sont stockées sur le cote de serveur. Si les cookies sont supprimés, ou modifier, il faut créer une nouvelle session car le serveur ne peut plus identifier l'utilisateur
+
+
+    //XSS c'est le faille de sécurite par injection du code malveillante , pour protege ça on doit maitre des filtre dans la methode $_POST par ex le filtre de evites les caratcteres speciale FILTER_SANITIZE_FULL_SPECIAL_CHARS (ou FILTER_SANITIZE_STRING), ou FILTER_FLAG_ALLOW_FRACTION permet d'autoriser la présence d'un séparateur décimal comme un point . ou une virgule, 
+
+
 
 </body>
 </html>
