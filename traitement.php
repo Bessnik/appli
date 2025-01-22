@@ -11,7 +11,7 @@ if(isset($_GET['action'])){ //isset vérifie si un paramètre existe dans l'URL.
                 $price = filter_input(INPUT_POST, "price", FILTER_VALIDATE_FLOAT, FILTER_FLAG_ALLOW_FRACTION); //FILTER_VALIDATE_FLOAT est un filtre utilisé pour valider qu'une valeur est un nombre à virgule flottante. FILTER_FLAG_ALLOW_FRACTION permet à la fonction de conserver le point décimal comme point(.) au virgule (,)
                 $qtt = filter_input(INPUT_POST, "qtt", FILTER_VALIDATE_INT); //FILTER_VALIDATE_INT est un filtre utilisé pour valider si une donnée est un nombre entier, sans le point au le decimale
 
-                if($name && $price && $qtt){ // Vérifie que les champs 'name', 'price' et 'qtt' ne sont pas vides ou nuls 
+                if($name && $price && $qtt){ // Vérifie que les champs 'name', 'price' et 'qtt' ne sont pas vides
 
                     // // Créer un tableau associatif $product pour stocker les produit
                     $product = [  
@@ -24,7 +24,7 @@ if(isset($_GET['action'])){ //isset vérifie si un paramètre existe dans l'URL.
                     $_SESSION['products'][] = $product; // Ajouter les produits dans la session
                     $_SESSION['message'] = "Produit ajouté avec succès !"; // envoyer le message si le produit est ajouté
                 } else {
-                    $_SESSION['message'] = "Erreur : Veuillez remplir tous les champs correctement."; // le message si est ne pas bien remplir
+                    $_SESSION['message'] = "Erreur : Veuillez remplir tous les champs correctement."; // le message si le formulaire ne pas bien remplir
                 }
             }
             break;
