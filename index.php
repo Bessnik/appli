@@ -46,8 +46,24 @@
         </p>  
     </form>
 
+    <!-- message -->
+    <?php
+    if (isset($_SESSION['message'])) {
+        echo "<p class='notification'>" . $_SESSION['message'] . "</p>";
+        unset($_SESSION['message']);
+    }
+    
+
+    // Rediraction
+    // if ($_GET['action'] === "add" || $_GET['action'] === "clear") {
+    //     header("Location: index.php");
+    // } else {
+    //     header("Location: recap.php");
+    // }
+    // exit();
+
+    ?>
+
+
 </body>
 </html>
-
-
-
