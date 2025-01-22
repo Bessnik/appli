@@ -13,7 +13,7 @@ if(isset($_GET['action'])){ //isset vérifie si un paramètre existe dans l'URL.
 
                 if($name && $price && $qtt){ // Validation des champs, est verifier si existe 
 
-                    // Ajouter le produit à la session
+                    // // Créer un tableau associatif $product pour stocker les produit
                     $product = [  
                         "name" => $name,
                         "price" => $price,
