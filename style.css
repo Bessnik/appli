@@ -1,95 +1,107 @@
+/* Définir le fond de la page avec une image et un redimensionnement automatique */
 body {     
-    
     background-size: 100% auto;
     background-image: url(illustration-de-fruits.jpg);
-
 }
 
 /* Titres principaux */
 h1 {
     text-align: center;
     color: #262122; 
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Espacement sous le titre */
 }
 
-/* Barre de navigation */
+/* Style de la barre de navigation */
 nav ul{
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #256ebd;
+    list-style-type: none; /* Enlever le surligne */
+    padding: 0; /* Enlever le padding */
+    display: flex; /* Utilisation du modèle Flexbox pour aligner les éléments */
+    justify-content: center; /* Centrer les éléments horizontalement */  
+    align-items: center;  
+    background-color: #256ebd; /* Couleur de fond  */
     width: 100%;
     height: 40px;
-    margin: auto;    
+    margin: auto;    /* Centrer la barre */
 }
 
 nav ul li{
-    margin: 0 50px;
+    margin: 0 50px; /* Espacement entre les éléments de la navigation */
 }
 
 nav ul li a{
-    color: white;
+    color: white; /* Couleur du texte */
     text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: bold; /* Mettre le texte en gras */
+    text-transform: uppercase;  /* Mettre le texte en majuscule */
 }
 
 nav ul li a:hover{
-    text-decoration: underline;
+    text-decoration: underline;  /* Souligner le texte au survol */
 }
 
 /* Formulaire */
 form {
     max-width: 400px; /*largeur maximale*/
     margin: 0 auto; /* Centrer le formulaire */
-    padding: 20px;
+    padding: 20px;  /* Ajouter du padding autour du contenu */
     border: 1px solid #ced4da; /* Bordure grise légère */
-    border-radius: 8px;
+    border-radius: 8px;  /* Arrondir les coins du formulaire */
     background-color: #ffffff; /* Fond blanc */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* l'ombre */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* l'ombre autour du formulaire */
 }
+
+/* Style des labels du formulaire */
 
 form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
+    display: block; /* Afficher chaque label sur une ligne séparée */
+    margin-bottom: 10px; /* Espacement en bas des labels */
+    font-weight: bold;  /* Mettre les labels en gras */
 }
 
-form input[type="text"],
+/* Style des champs de texte et du bouton de soumission */
+form input[type="text"], 
 form input[type="submit"] {
-    width: 100%;
+    width: 100%;  /* Champs occupent toute la largeur */
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    box-sizing: border-box;
+    margin-bottom: 15px; /* Espacement sous chaque champ */
+    border: 1px solid #ced4da; /* Ajouter la bordure  */
+    border-radius: 4px;  /* Arrondir les coins du champ */
+    box-sizing: border-box;  /* Inclure la bordure dans le calcul de la largeur totale */
 }
 
+/* Style pour le titre Ajouter un produit */
+h1 {
+    background-color: rgb(185, 208, 241);
+    border-radius: 4px;
+    max-width: 400px;
+    margin: 25px auto;
+}
+
+/* Style pour le bouton de soumission */
 form input[type="submit"] {
     background-color: #63a3f7; /* Couleur du bouton */
     color: #ffffff; /* Couleur du texte */
-    cursor: pointer;
+    cursor: pointer;  /* Changer le curseur au survol */
     font-weight: bold;
 }
 
 form input[type="submit"]:hover {
-    background-color: #256ebd; 
+    background-color: #256ebd; /* Couleur de fond au survol */
 }
 
 
+/* Style général du tableau  */
 table {
-    width: 60%;
-    margin: 20px auto; /* Centre le tableau */
+    width: 60%;  /* Largeur du tableau */
+    margin: 20px auto; /* Centre le tableau avec un espacement */
     border-collapse: collapse; /* Supprimer les espaces entre les bordures */
     background-color: #ffffff; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre autour du tableau */
 }
 
 table th, table td {
-    padding: 10px 15px;
-    text-align: left;
+    padding: 10px 15px; /* Ajouter du padding dans chaque cellule */
+    text-align: left;  /* Aligner le texte à gauche */
     border: 1px solid #dee2e6; /* Bordure des cellules */
     
 }
@@ -102,27 +114,28 @@ table th {
 
 td a{
     text-decoration: none;     
-    display: inline-block;
-    text-align: center;
-    width: 100%;
+    display: inline-block; /* Afficher en ligne et permettre le blocage */
+    text-align: center; /* Centre le texte */
+    width: 100%; /* Largeur de chaque cellule */
 }
 
 table tr:hover {
     background-color: #e3eaf1; /* Couleur au survol */
 }
 
-/* Total général */
+/* Style pour la cellule du pied de table - Total général */
 table tfoot td {
-    font-weight: bold;
-    color: #63a3f7;
+    font-weight: bold;  /* Texte en gras */
+    color: #63a3f7;  
     
 }
 
+/* Style pour les notifications */
 .notification {
-    margin: 20px auto;
-    max-width: 600px;
-    padding: 10px;
-    border: 1px solid #63a3f7;
+    margin: 20px auto; /* Centrer la notification avec un espacement */
+    max-width: 600px; /* Largeur maximale de la notification */
+    padding: 10px;  /* Padding autour du texte */
+    border: 1px solid #63a3f7; /* Ajouter la bordure */
     background-color: #e3eaf1;
     color: #256ebd;
     border-radius: 4px;
@@ -130,32 +143,39 @@ table tfoot td {
     font-weight: bold;
 }
 
+/* Style pour le total géneral */
 .total{
     background-color: #63a3f7;
     color: white;
 }
 
+/* Style pour le chifre de  total géneral */
 .total-nr{
     background-color: #63a3f7;
     color: white;
 }
 
+/* Style pour effacer le panier */
 .clear{
     background-color: #ff0000;
 }
 
+/* Style pour le lien dans les boutons de efface le panier*/
 .clear-btn{    
     text-decoration: none;    
-    font-weight: bold;
+    font-weight: bold; /* Texte en gras */
     color: white;    
-    text-transform: uppercase;
+    text-transform: uppercase; /* Mettre le texte en majuscule */
 }
 
+
+/* Style pour centrer l'ajout un quantité  */
 .centre{
     text-align: center;
     background-color: #63a3f7;
 }
 
+/* Style pour centrer le supression un quantité  */
 .centre2{
     text-align: center;
     /* background-color: rgba(255, 255, 255, 0.5); */
@@ -164,10 +184,12 @@ table tfoot td {
 }
 
 .centre2 a{
-    color: red;
+    color: red; /* Couleur rouge pour le -  */
 
 }
 
+
+/* Style pour le suppression de produit */
 .supr{
     text-align: center;
     background-color: #f44343;
@@ -178,33 +200,19 @@ table tfoot td {
     color: white;  /* Définit la couleur du texte dans le lien */
     
 }
+
+/* Style pour le bouton d'ajout le quantité */
 .ajouter{
-    margin: auto;
-    border-radius: 50%;
-    width: 25%;    
+    margin: auto; /* Centrer le + */ 
     color: #f3f6fa;
     font-size: 40px;
     font-weight: bold;
 }
 
-
+/* Style pour le bouton de suprimer le quantité */
 .diminuee{
-    margin: auto;
-    border-radius: 100%;
-    width: 25%;
+    margin: auto;    /* Centrer le - */
     color: rgb(252, 246, 246);    
     font-size: 40px;
-    font-weight: bold;
-    justify-content: center;
-    align-items: center;
-}
-.suprimer{
-    margin: auto;
-    border-radius: 100%;
-    width: 25%;
-    color: rgb(252, 246, 246);    
-    font-size: 40px;
-    font-weight: bold;
-    justify-content: center;
-    align-items: center;
+    font-weight: bold;    
 }

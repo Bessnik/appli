@@ -14,8 +14,8 @@
     <!-- Barre de navigation -->
     <nav>
         <ul>
-            <li><a href="index.php">Accueil</a></li>
-            <li><a href="recap.php">Récapitulatif</a></li>
+            <li><a href="index.php">Accueil</a></li>  <!-- lien vers Accueil index.php -->
+            <li><a href="recap.php">Récapitulatif</a></li> <!-- lien vers Récapitulatif recap.php -->
         </ul>
     </nav>
 
@@ -23,20 +23,20 @@
     <?php 
         // Vérifier si la session contient des produits
         if(!isset($_SESSION['products']) || empty($_SESSION['products'])){
-            echo "<p>Aucun produit en session...</p>";
+            echo "<p>Aucun produit en session...</p>"; // afficher le message 
         } else {
             // Afficher le tableau des produits
             echo "<table>", // la table
                     "<thead>",// en tête de table
                         "<tr>",// ligne de tableau
                             "<th>#</th>", // Numéro d'ordre
-                            "<th>Nom</th>",
-                            // "<th>Prix</th>",
-                            // "<th>Quantité</th>",
+                            "<th>Nom</th>", // Nom de produit
+                            // "<th>Prix</th>", // Prix de produit
+                            // "<th>Quantité</th>", // Quantité de produit
                             "<th>Total</th>",  // Total pour le produit (prix * quantité)
-                            "<th>Ajouter un quantité</th>",
-                            "<th>Suprimer un quantité</th>",
-                            "<th>Suprimer le produit</th>",
+                            "<th>Ajouter un quantité</th>", // Ajout un quantité
+                            "<th>Suprimer un quantité</th>", // Suprimer un quantité
+                            "<th>Suprimer le produit</th>", // Suprimer un produit
 
                         "</tr>",
                     "</thead>",
@@ -50,8 +50,8 @@
                             // "<td>".number_format($product['price'], 2, ",", "&nbsp;")."&nbsp;€</td>", // Prix du produit formaté
                             // "<td>".$product['qtt']."</td>", // Quantité du produit
                             "<td>".number_format($product['qtt'] * $product['price'], 2, ",", "&nbsp;")."&nbsp;€</td>", // Total pour ce produit
-                            '<td class="centre"><a class="ajouter" href="traitement.php?action=up-qtt&id='.$index.'">+</a></td>',  // Bouton pour augmenter la quantité
-                            '<td class="centre2"><a class="diminuee" href="traitement.php?action=down-qtt&id='.$index.'">-</a></td>',  // Bouton pour diminuer la quantité
+                            '<td class="centre"><a class="ajouter" href="traitement.php?action=up-qtt&id='.$index.'">+</a></td>',  // Bouton pour augmenter par 1 la quantité
+                            '<td class="centre2"><a class="diminuee" href="traitement.php?action=down-qtt&id='.$index.'">-</a></td>',  // Bouton pour diminuer par 1 la quantité
                             '<td class="supr"><a href="traitement.php?action=delete&id='.$index.'">Supprimer</a></td>', // Bouton pour supprimer le produit
                         "</tr>";
                         
@@ -60,11 +60,9 @@
             echo    
                     "<tfoot>",
                         "<tr>",
-                            '<td class="total" colspan=2>Total général : </td>', // Fusionner 2 colonnes
+                            '<td class="total" colspan=2>Total général : </td>', // Colspan fusionner 2 colonnes
                             '<td class="total-nr"><strong>'.number_format($totalGeneral, 2, ",", "&nbsp;").'&nbsp;€</strong></td>', // Total général
-                            '<td class="clear" colspan=3><a class="clear-btn" href="traitement.php?action=clear">Effacer le panier</a></td>', // Fusionner 2 colonnes
-
-                            
+                            '<td class="clear" colspan=3><a class="clear-btn" href="traitement.php?action=clear">Effacer le panier</a></td>', // Fusionner 3 colonnes                            
                         "</tr>",
                     "</tfoot>",
                 "</tbody>",
