@@ -2,7 +2,7 @@
 
 Prémiere appli en PHP, ce projet fait partie d'un exercice que j'ai réalisé dans le cadre de ma formation.
 
-Ce projet est une application simple en PHP d'ajout les produits dans le formulaire en utilisant PHP, HTML et CSS. 
+Ce projet est une application simple en PHP d'ajout les produits dans le formulaire en utilisant PHP, et CSS. 
 
 
 Permet d'ajouter, de supprimer les produits,  d'ajouter un quantité au suprimer un quantité, on peut effacer le panier aussi.
